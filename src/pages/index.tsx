@@ -1,6 +1,8 @@
 import {GetStaticProps} from 'next';
 import {getAllContent} from '../services/content.service';
 import {ContentObject} from '../typings/content';
+import Card from '../components/Card';
+import styles from './App.module.css';
 
 interface HomePageProps {
   contents: Array<ContentObject>;
@@ -8,19 +10,24 @@ interface HomePageProps {
 
 export default function Home({contents}: HomePageProps) {
   return (
-    <>
-      <div>
-        {contents.map((item) => (
-          <div
-            key={item.id}
-            style={{padding: 20, borderBottom: '1px solid #ccc'}}
-          >
-            <h2>{item.name}</h2>
-            <p>{item.url}</p>
-          </div>
-        ))}
-      </div>
-    </>
+    <main className={styles.main}>
+      <section className={styles.section}>
+        <div className={styles.layout}>
+          {contents.slice(0, 6).map((element, index) => {
+            const cardSizeLarge = index < 2;
+            return (
+              <Card
+                key={index}
+                contentInfo={element}
+                
+                className={cardSizeLarge ? styles.bigger : undefined}
+                cardSizeLarge={cardSizeLarge}
+              />
+            );
+          })}
+        </div>
+      </section>
+    </main>
   );
 }
 

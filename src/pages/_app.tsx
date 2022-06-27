@@ -1,6 +1,6 @@
 
-function KoketApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function KoketApp({Component, pageProps}) {
+  return <Component {...pageProps} />;
 }
 
-export default KoketApp
+export default KoketApp;

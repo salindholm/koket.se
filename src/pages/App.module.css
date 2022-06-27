@@ -1,0 +1,43 @@
+.main {
+  max-width: 1258px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0 auto;
+}
+
+.section {
+  margin: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 8px;
+  grid-column-gap: 16px;
+  column-gap: 16px;
+  grid-row-gap: 16px;
+  row-gap: 16px;
+}
+
+.bigger {
+  grid-column: span 2 / span 2;
+}
+
+@media (min-width: 650px) {
+  .section {
+    height: 100%;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .layout {
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .bigger {
+    grid-column: span 2 / span 2;
+  }
+}
