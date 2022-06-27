@@ -4,11 +4,6 @@
   margin: 0 auto;
 }
 
-.section {
-  margin: auto;
-  padding-left: 16px;
-  padding-right: 16px;
-}
 
 .layout {
   display: grid;
@@ -19,6 +14,9 @@
   column-gap: 16px;
   grid-row-gap: 16px;
   row-gap: 16px;
+  margin: auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .bigger {

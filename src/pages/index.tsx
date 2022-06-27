@@ -11,28 +11,24 @@ interface HomePageProps {
 export default function Home({contents}: HomePageProps) {
   return (
     <main className={styles.main}>
-      <section className={styles.section}>
-        <div className={styles.layout}>
-          {contents.slice(0, 6).map((element, index) => {
-            const cardSizeLarge = index < 2;
-            return (
-              <Card
-                key={index}
-                contentInfo={element}
-                
-                className={cardSizeLarge ? styles.bigger : undefined}
-                cardSizeLarge={cardSizeLarge}
-              />
-            );
-          })}
-        </div>
-      </section>
+      <div className={styles.layout}>
+        {contents.slice(0, 6).map((element, index) => {
+          const cardSizeLarge = index < 2;
+          return (
+            <Card
+              key={index}
+              contentInfo={element}
+              className={cardSizeLarge ? styles.bigger : undefined}
+              cardSizeLarge={cardSizeLarge}
+            />
+          );
+        })}
+      </div>
     </main>
   );
 }
 
 export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
   const contents = await getAllContent();
-  debugger;
   return {props: {contents}};
 };
