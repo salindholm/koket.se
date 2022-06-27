@@ -129,6 +129,10 @@
   padding: 4px 8px;
 }
 
+.bigger {
+  grid-column: span 2 / span 2;
+}
+
 @media (min-width: 650px) {
   .blackTitle {
     color: #5a5555;
@@ -149,5 +153,9 @@
     color: #5a5555;
     font-size: 1.125rem;
     margin: 0;
+  }
+
+  .bigger {
+    grid-column: span 2 / span 2;
   }
 }

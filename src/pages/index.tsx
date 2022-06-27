@@ -13,13 +13,11 @@ export default function Home({contents}: HomePageProps) {
     <main className={styles.main}>
       <div className={styles.layout}>
         {contents.slice(0, 6).map((element, index) => {
-          const cardSizeLarge = index < 2;
           return (
             <Card
-              key={index}
+              key={element.id}
               contentInfo={element}
-              className={cardSizeLarge ? styles.bigger : undefined}
-              cardSizeLarge={cardSizeLarge}
+              variant={index < 2 ? 'large' : 'normal'}
             />
           );
         })}

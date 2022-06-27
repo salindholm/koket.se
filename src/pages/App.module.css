@@ -4,7 +4,6 @@
   margin: 0 auto;
 }
 
-
 .layout {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -19,23 +18,10 @@
   padding-right: 16px;
 }
 
-.bigger {
-  grid-column: span 2 / span 2;
-}
-
 @media (min-width: 650px) {
-  .section {
-    height: 100%;
-    width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
-  }
   .layout {
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, minmax(0, 1fr));
     gap: 16px;
-  }
-  .bigger {
-    grid-column: span 2 / span 2;
   }
 }

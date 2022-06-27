@@ -14,7 +14,7 @@ export async function axiosGet<T>(
 ): Promise<T> {
   try {
     const res: AxiosResponse<T> = await axios.get<T>(encodeURI(endpoint));
-    debugger
+    debugger;
     return res.data;
   } catch (error) {
     if (error.response) {
