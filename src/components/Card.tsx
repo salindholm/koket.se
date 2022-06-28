@@ -20,7 +20,7 @@ const Card = ({contentInfo, variant}: CardProps) => {
   const styleOption =
     variant === 'large'
       ? {
-          wrapper: `${styles.wrapper} ${styles.bigger}`,
+          wrapper: `${styles.wrapper} ${styles.largeContentGrid}`,
           imageWrapper: styles.bigImageWrapper,
           gradient: styles.whiteGradient,
           textWrapper: styles.whiteTextWrapper,

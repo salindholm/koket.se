@@ -129,7 +129,7 @@
   padding: 4px 8px;
 }
 
-.bigger {
+.largeContentGrid {
   grid-column: span 2 / span 2;
 }
 
@@ -155,7 +155,7 @@
     margin: 0;
   }
 
-  .bigger {
+  .largeContentGrid {
     grid-column: span 2 / span 2;
   }
 }
